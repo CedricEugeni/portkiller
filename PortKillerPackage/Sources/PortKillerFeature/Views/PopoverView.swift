@@ -50,7 +50,7 @@ public struct PopoverView: View {
                             .foregroundColor(.secondary)
                             .font(.system(size: 12))
                         
-                        TextField(String(localized: "Search ports, process, PID...", bundle: .module), text: $searchText)
+                        TextField(String.moduleLocalized("Search ports, process, PID..."), text: $searchText)
                             .textFieldStyle(.plain)
                             .font(.system(size: 13))
                             .focused($isSearchFocused)
@@ -84,7 +84,7 @@ public struct PopoverView: View {
                     }
                     .buttonStyle(.borderless)
                     .disabled(scanner.isScanning)
-                    .help(String(localized: "Refresh port list", bundle: .module))
+                    .help(String.moduleLocalized("Refresh port list"))
                 }
                 
                 // Error banner
@@ -107,7 +107,7 @@ public struct PopoverView: View {
                                 .font(.system(size: 12))
                         }
                         .buttonStyle(.borderless)
-                        .help(String(localized: "Copy error message", bundle: .module))
+                        .help(String.moduleLocalized("Copy error message"))
                     }
                     .padding(8)
                     .background(Color.orange.opacity(0.1))
@@ -130,7 +130,7 @@ public struct PopoverView: View {
                                     .font(.system(size: 48))
                                     .foregroundColor(.secondary)
                                 
-                                Text(searchText.isEmpty ? String(localized: "No ports listening", bundle: .module) : String(localized: "No ports matching your search", bundle: .module))
+                                Text(searchText.isEmpty ? String.moduleLocalized("No ports listening") : String.moduleLocalized("No ports matching your search"))
                                     .font(.system(size: 14))
                                     .foregroundColor(.secondary)
                             }
@@ -162,7 +162,7 @@ public struct PopoverView: View {
                                         Image(systemName: "exclamationmark.shield")
                                             .foregroundColor(.orange)
                                             .font(.system(size: 14))
-                                        Text(String(localized: "System Ports (<1024)", bundle: .module))
+                                        Text(String.moduleLocalized("System Ports (<1024)"))
                                             .font(.system(size: 14, weight: .semibold))
                                         Spacer()
                                         Text("\(systemPorts.count)")
@@ -206,7 +206,7 @@ public struct PopoverView: View {
                                         Image(systemName: "network")
                                             .foregroundColor(.blue)
                                             .font(.system(size: 14))
-                                        Text(String(localized: "User Ports (≥1024)", bundle: .module))
+                                        Text(String.moduleLocalized("User Ports (≥1024)"))
                                             .font(.system(size: 14, weight: .semibold))
                                         Spacer()
                                         Text("\(userPorts.count)")
@@ -229,7 +229,7 @@ public struct PopoverView: View {
                                 Spacer()
                                 ProgressView()
                                     .scaleEffect(0.8)
-                                Text(String(localized: "Scanning ports...", bundle: .module))
+                                Text(String.moduleLocalized("Scanning ports..."))
                                     .font(.system(size: 12))
                                     .foregroundColor(.secondary)
                                 Spacer()
@@ -258,7 +258,7 @@ public struct PopoverView: View {
                     HStack(spacing: 4) {
                         Image(systemName: "power")
                             .font(.system(size: 11))
-                        Text(String(localized: "Quit", bundle: .module))
+                        Text(String.moduleLocalized("Quit"))
                             .font(.system(size: 12))
                     }
                 }
@@ -291,15 +291,15 @@ public struct PopoverView: View {
             }
             return .ignored
         }
-        .alert(String(localized: "Kill System Process?", bundle: .module), isPresented: $showKillConfirmation, presenting: portToKill) { port in
-            Button(String(localized: "Cancel", bundle: .module), role: .cancel) { }
-            Button(String(localized: "Kill Process", bundle: .module), role: .destructive) {
+        .alert(String.moduleLocalized("Kill System Process?"), isPresented: $showKillConfirmation, presenting: portToKill) { port in
+            Button(String.moduleLocalized("Cancel"), role: .cancel) { }
+            Button(String.moduleLocalized("Kill Process"), role: .destructive) {
                 Task {
                     await killProcess(port)
                 }
             }
         } message: { port in
-            Text(String(localized: "Warning: '\(port.processName)' (PID: \(port.pid)) is a system process running as root.\n\nKilling this process may cause system instability or require a restart.", bundle: .module))
+            Text(String.moduleLocalized("Warning: '\(port.processName)' (PID: \(port.pid)) is a system process running as root.\n\nKilling this process may cause system instability or require a restart."))
         }
     }
     
@@ -307,7 +307,7 @@ public struct PopoverView: View {
         // Check if completely blocked
         if killer.isCompletelyBlocked(port: port) {
             // Show error - cannot kill
-            scanner.lastError = String(localized: "Cannot kill \(port.processName) - critical system process", bundle: .module)
+            scanner.lastError = String.moduleLocalized("Cannot kill \(port.processName) - critical system process")
             return
         }
         
@@ -334,7 +334,7 @@ public struct PopoverView: View {
             await scanner.scan()
         } catch {
             await MainActor.run {
-                scanner.lastError = String(localized: "Failed to kill process: \(error.localizedDescription)", bundle: .module)
+                scanner.lastError = String.moduleLocalized("Failed to kill process: \(error.localizedDescription)")
             }
         }
         

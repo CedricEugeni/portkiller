@@ -34,7 +34,7 @@ public struct PortRowView: View {
                     .foregroundColor(.primary)
                 
                 // IP/Interface
-                Text(port.address == "*" ? String(localized: "All interfaces", bundle: .module) : port.address)
+                Text(port.address == "*" ? String.moduleLocalized("All interfaces") : port.address)
                     .font(.system(size: 11))
                     .foregroundColor(.secondary)
             }
@@ -48,7 +48,7 @@ public struct PortRowView: View {
                     .frame(width: 60, height: 26)
             } else if isHovered || isSelected {
                 Button(action: onKill) {
-                    Text(String(localized: "Stop", bundle: .module))
+                    Text(String.moduleLocalized("Stop"))
                         .font(.system(size: 12, weight: .semibold))
                 }
                 .buttonStyle(.borderedProminent)
