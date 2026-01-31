@@ -1,6 +1,7 @@
 # Screenshots
 
 Add your screenshots here:
+
 - `screenshot.png` - Main app interface (used in README)
 - `demo.gif` - Animated demo showing the workflow (optional but recommended)
 
@@ -15,11 +16,13 @@ Add your screenshots here:
 ## Creating a GIF Demo
 
 Use tools like:
+
 - **Kap** (https://getkap.co/) - Free, simple
 - **LICEcap** - Lightweight
 - **QuickTime** + gifski
 
 Show:
+
 1. Opening the app from menu bar
 2. Searching for a port
 3. Hovering and clicking Stop

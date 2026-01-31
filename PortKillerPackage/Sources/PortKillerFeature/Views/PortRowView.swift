@@ -2,12 +2,16 @@ import SwiftUI
 
 public struct PortRowView: View {
     let port: PortInfo
+    let isSelected: Bool
+    let isKilling: Bool
     let onKill: () -> Void
     
     @State private var isHovered = false
     
-    public init(port: PortInfo, onKill: @escaping () -> Void) {
+    public init(port: PortInfo, isSelected: Bool = false, isKilling: Bool = false, onKill: @escaping () -> Void) {
         self.port = port
+        self.isSelected = isSelected
+        self.isKilling = isKilling
         self.onKill = onKill
     }
     
@@ -30,17 +34,21 @@ public struct PortRowView: View {
                     .foregroundColor(.primary)
                 
                 // IP/Interface
-                Text(port.address == "*" ? "All interfaces" : port.address)
+                Text(port.address == "*" ? String(localized: "All interfaces", bundle: .module) : port.address)
                     .font(.system(size: 11))
                     .foregroundColor(.secondary)
             }
             
             Spacer()
             
-            // Stop button - visible on hover
-            if isHovered {
+            // Stop button or spinner - visible on hover, selected, or killing
+            if isKilling {
+                ProgressView()
+                    .scaleEffect(0.7)
+                    .frame(width: 60, height: 26)
+            } else if isHovered || isSelected {
                 Button(action: onKill) {
-                    Text("Stop")
+                    Text(String(localized: "Stop", bundle: .module))
                         .font(.system(size: 12, weight: .semibold))
                 }
                 .buttonStyle(.borderedProminent)
@@ -51,7 +59,10 @@ public struct PortRowView: View {
         .padding(.horizontal, 12)
         .padding(.vertical, 8)
         .contentShape(Rectangle())
-        .background(isHovered ? Color.gray.opacity(0.1) : Color.clear)
+        .background(
+            isSelected ? Color.accentColor.opacity(0.2) :
+            isHovered ? Color.gray.opacity(0.1) : Color.clear
+        )
         .cornerRadius(6)
         .onHover { hovering in
             withAnimation(.easeInOut(duration: 0.15)) {
