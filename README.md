@@ -6,7 +6,7 @@
 [![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-![PortKiller Screenshot](docs/screenshot.png)
+![PortKiller Screenshot](docs/main.gif)
 
 <!-- TODO: Add screenshot -->
 
