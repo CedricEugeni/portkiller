@@ -25,21 +25,38 @@
 
 ## 🚀 Installation
 
-### Via Homebrew (Recommended)
+Choose the installation method that works best for you:
+
+### Option 1: Homebrew (⭐ Recommended)
+
+The easiest way to install and keep PortKiller updated:
 
 ```bash
-brew install --cask cedriceugeni/portkiller/portkiller
+# Add the tap
+brew tap cedriceugeni/portkiller
+
+# Install PortKiller
+brew install --cask portkiller
 ```
 
-### Manual Installation
+**Update to latest version:**
+```bash
+brew upgrade --cask portkiller
+```
 
-1. Download the latest release from [Releases](https://github.com/cedriceugeni/portkiller/releases)
-2. Unzip and move `PortKiller.app` to `/Applications`
-3. Right-click → Open (first time only, to bypass Gatekeeper)
+### Option 2: Download from GitHub Releases
 
-**Note**: macOS will warn about an unsigned app. This is normal - the app is open source and not notarized.
+Perfect if you prefer manual installation:
 
-## 🛠️ Build from Source
+1. Go to [Releases](https://github.com/cedriceugeni/portkiller/releases/latest)
+2. Download `PortKiller-v1.0.0.zip` (or latest version)
+3. Unzip the file
+4. Drag `PortKiller.app` to your `/Applications` folder
+5. **First launch:** Right-click the app → **Open** (to bypass Gatekeeper warning)
+
+### Option 3: Build from Source
+
+For developers who want to customize or contribute:
 
 ```bash
 # Clone the repository
@@ -52,12 +69,35 @@ xcodebuild -workspace PortKiller.xcworkspace \
            -configuration Release \
            build
 
-# App will be in: build/Release/PortKiller.app
+# The app will be in:
+# build/Release/PortKiller.app
+
+# Or open in Xcode to build and run:
+open PortKiller.xcworkspace
 ```
 
-### Requirements
+**Requirements for building:**
 - macOS 14.0 or later
 - Xcode 16.0 or later
+
+---
+
+### ⚠️ First Launch
+
+**macOS will show a security warning** because the app is not signed or notarized. This is normal and expected for open-source apps distributed outside the Mac App Store.
+
+**To open the app:**
+1. Right-click (or Control-click) on `PortKiller.app`
+2. Select **Open** from the menu
+3. Click **Open** in the security dialog
+
+**Or use Terminal:**
+```bash
+xattr -cr /Applications/PortKiller.app
+open /Applications/PortKiller.app
+```
+
+After the first launch, you can open PortKiller normally from Spotlight or Applications.
 
 ## 📖 Usage
 
