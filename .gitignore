@@ -49,6 +49,21 @@ playground.xcworkspace
 
 Carthage/Build/
 
+# Build artifacts
+build/
+DerivedData/
+*.xcarchive
+
+# macOS
+.DS_Store
+*.swp
+*~.nib
+
+# IDEs
+*.xcuserstate
+*.xcworkspace/xcshareddata/*.xccheckout
+*.xcworkspace/xcshareddata/*.xcscmblueprint
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo.

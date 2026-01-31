@@ -1,4 +1,0 @@
-module PortKillerFeature {
-header "PortKillerFeature-Swift.h"
-export *
-}

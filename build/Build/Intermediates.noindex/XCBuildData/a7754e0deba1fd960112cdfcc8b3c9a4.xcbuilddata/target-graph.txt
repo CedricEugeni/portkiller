@@ -1,6 +1,0 @@
-Target dependency graph (3 targets)
-Target 'PortKiller' in project 'PortKiller'
-➜ Explicit dependency on target 'PortKillerFeature' in project 'PortKillerFeature'
-Target 'PortKillerFeature' in project 'PortKillerFeature'
-➜ Explicit dependency on target 'PortKillerFeature' in project 'PortKillerFeature'
-Target 'PortKillerFeature' in project 'PortKillerFeature' (no dependencies)

@@ -1,103 +1,125 @@
-# PortKiller - macOS App
+# 🔪 PortKiller
 
-A modern macOS application using a **workspace + SPM package** architecture for clean separation between app shell and feature code.
+> A lightweight macOS menu bar app to view and kill processes occupying ports. No more `lsof` and `kill` commands in the terminal!
 
-## Project Architecture
+[![macOS](https://img.shields.io/badge/macOS-14.0+-blue.svg)](https://www.apple.com/macos)
+[![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-```
-PortKiller/
-├── PortKiller.xcworkspace/              # Open this file in Xcode
-├── PortKiller.xcodeproj/                # App shell project
-├── PortKiller/                          # App target (minimal)
-│   ├── Assets.xcassets/                # App-level assets (icons, colors)
-│   ├── PortKillerApp.swift              # App entry point
-│   ├── PortKiller.entitlements          # App sandbox settings
-│   └── PortKiller.xctestplan            # Test configuration
-├── PortKillerPackage/                   # 🚀 Primary development area
-│   ├── Package.swift                   # Package configuration
-│   ├── Sources/PortKillerFeature/       # Your feature code
-│   └── Tests/PortKillerFeatureTests/    # Unit tests
-└── PortKillerUITests/                   # UI automation tests
-```
+![PortKiller Screenshot](docs/screenshot.png)
+<!-- TODO: Add screenshot -->
 
-## Key Architecture Points
+## ✨ Features
 
-### Workspace + SPM Structure
-- **App Shell**: `PortKiller/` contains minimal app lifecycle code
-- **Feature Code**: `PortKillerPackage/Sources/PortKillerFeature/` is where most development happens
-- **Separation**: Business logic lives in the SPM package, app target just imports and displays it
+- 🎯 **Simple & Fast** - Lives in your menu bar, one click away
+- 🔍 **Smart Search** - Filter by port number, process name, or PID
+- 🏷️ **Clear Port Display** - Port numbers styled as easy-to-read tags
+- 🔐 **Safe Kills** - Confirmation for system-critical processes
+- 📋 **Organized Lists** - Separate system ports (<1024) and user ports (≥1024)
+- 🔄 **Manual Refresh** - Update port list on demand
+- 🚫 **No Dock Icon** - Menu bar only, stays out of your way
 
-### Buildable Folders (Xcode 16)
-- Files added to the filesystem automatically appear in Xcode
-- No need to manually add files to project targets
-- Reduces project file conflicts in teams
+## 🎬 Demo
 
-### App Sandbox
-The app is sandboxed by default with basic file access permissions. Modify `PortKiller.entitlements` to add capabilities as needed.
+<!-- TODO: Add GIF showing the workflow -->
 
-## Development Notes
+## 🚀 Installation
 
-### Code Organization
-Most development happens in `PortKillerPackage/Sources/PortKillerFeature/` - organize your code as you prefer.
+### Via Homebrew (Recommended)
 
-### Public API Requirements
-Types exposed to the app target need `public` access:
-```swift
-public struct SettingsView: View {
-    public init() {}
-    
-    public var body: some View {
-        // Your view code
-    }
-}
+```bash
+brew install --cask cedriceugeni/portkiller/portkiller
 ```
 
-### Adding Dependencies
-Edit `PortKillerPackage/Package.swift` to add SPM dependencies:
-```swift
-dependencies: [
-    .package(url: "https://github.com/example/SomePackage", from: "1.0.0")
-],
-targets: [
-    .target(
-        name: "PortKillerFeature",
-        dependencies: ["SomePackage"]
-    ),
-]
+### Manual Installation
+
+1. Download the latest release from [Releases](https://github.com/cedriceugeni/portkiller/releases)
+2. Unzip and move `PortKiller.app` to `/Applications`
+3. Right-click → Open (first time only, to bypass Gatekeeper)
+
+**Note**: macOS will warn about an unsigned app. This is normal - the app is open source and not notarized.
+
+## 🛠️ Build from Source
+
+```bash
+# Clone the repository
+git clone https://github.com/cedriceugeni/portkiller.git
+cd portkiller
+
+# Build with Xcode
+xcodebuild -workspace PortKiller.xcworkspace \
+           -scheme PortKiller \
+           -configuration Release \
+           build
+
+# App will be in: build/Release/PortKiller.app
 ```
 
-### Test Structure
-- **Unit Tests**: `PortKillerPackage/Tests/PortKillerFeatureTests/` (Swift Testing framework)
-- **UI Tests**: `PortKillerUITests/` (XCUITest framework)
-- **Test Plan**: `PortKiller.xctestplan` coordinates all tests
+### Requirements
+- macOS 14.0 or later
+- Xcode 16.0 or later
 
-## Configuration
+## 📖 Usage
 
-### XCConfig Build Settings
-Build settings are managed through **XCConfig files** in `Config/`:
-- `Config/Shared.xcconfig` - Common settings (bundle ID, versions, deployment target)
-- `Config/Debug.xcconfig` - Debug-specific settings  
-- `Config/Release.xcconfig` - Release-specific settings
-- `Config/Tests.xcconfig` - Test-specific settings
+1. Click the menu bar icon to open PortKiller
+2. Browse the list of occupied ports
+3. Search for specific ports or processes
+4. Hover over a row and click **Stop** to kill the process
+5. Click the refresh button to update the list
 
-### App Sandbox & Entitlements
-The app is sandboxed by default with basic file access. Edit `PortKiller/PortKiller.entitlements` to add capabilities:
-```xml
-<key>com.apple.security.files.user-selected.read-write</key>
-<true/>
-<key>com.apple.security.network.client</key>
-<true/>
-<!-- Add other entitlements as needed -->
+### Permissions
+
+PortKiller requires permission to execute system commands (`lsof` and `kill`). The app is **not sandboxed** to allow these operations. All code is open source for transparency.
+
+## 🏗️ Architecture
+
+Built with modern Swift and SwiftUI using a clean workspace + Swift Package architecture:
+
+```
+├── PortKiller.xcworkspace/          # Main workspace
+├── PortKiller/                      # App shell (minimal)
+│   ├── AppDelegate.swift           # Menu bar setup
+│   └── PortKillerApp.swift         # App entry point
+└── PortKillerPackage/               # Feature package
+    └── Sources/PortKillerFeature/
+        ├── Services/
+        │   ├── PortScanner.swift   # lsof execution & parsing
+        │   └── ProcessKiller.swift # Process termination
+        ├── Views/
+        │   ├── PopoverView.swift   # Main UI
+        │   └── PortRowView.swift   # Port list item
+        └── Models/
+            └── PortInfo.swift      # Data model
 ```
 
-## macOS-Specific Features
+### Key Technologies
+- **SwiftUI** for UI
+- **NSStatusBar** for menu bar integration
+- **Process API** for executing `lsof` and `kill`
+- **Swift 6** concurrency with async/await
 
-### Window Management
-Add multiple windows and settings panels:
-```swift
-@main
-struct PortKillerApp: App {
-    var body: some Scene {
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+- 🐛 Report bugs
+- 💡 Suggest features
+- 🔧 Submit pull requests
+
+## ⚠️ Disclaimer
+
+This app executes system commands with elevated privileges when needed. Use with caution when killing processes. Critical system processes are protected, but you can still break things if you're not careful.
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+Built because running `lsof -iTCP -sTCP:LISTEN -n -P` and `kill -9` every time got old real fast.
+
+---
+
+**Made with ❤️ and Swift** | [Report an Issue](https://github.com/cedriceugeni/portkiller/issues)
         WindowGroup {
             ContentView()
         }
