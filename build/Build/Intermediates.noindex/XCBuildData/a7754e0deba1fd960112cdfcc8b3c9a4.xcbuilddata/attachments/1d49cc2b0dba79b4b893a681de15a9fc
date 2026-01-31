@@ -1,0 +1,69 @@
+{
+  "" : {
+    "diagnostics" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortKillerFeature-primary.dia",
+    "emit-module-dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortKillerFeature-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortKillerFeature-primary-emit-module.dia",
+    "pch" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortKillerFeature-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortKillerFeature-primary.swiftdeps"
+  },
+  "/Users/cedriceugeni/dev/perso/portkiller/PortKillerPackage/Sources/PortKillerFeature/ContentView.swift" : {
+    "const-values" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/cedriceugeni/dev/perso/portkiller/PortKillerPackage/Sources/PortKillerFeature/Models/PortInfo.swift" : {
+    "const-values" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortInfo.swiftconstvalues",
+    "dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortInfo.d",
+    "diagnostics" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortInfo.dia",
+    "index-unit-output-path" : "/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortInfo.o",
+    "llvm-bc" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortInfo.bc",
+    "object" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortInfo.o",
+    "swift-dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortInfo.swiftdeps",
+    "swiftmodule" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortInfo~partial.swiftmodule"
+  },
+  "/Users/cedriceugeni/dev/perso/portkiller/PortKillerPackage/Sources/PortKillerFeature/Services/PortScanner.swift" : {
+    "const-values" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortScanner.swiftconstvalues",
+    "dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortScanner.d",
+    "diagnostics" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortScanner.dia",
+    "index-unit-output-path" : "/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortScanner.o",
+    "llvm-bc" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortScanner.bc",
+    "object" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortScanner.o",
+    "swift-dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortScanner.swiftdeps",
+    "swiftmodule" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortScanner~partial.swiftmodule"
+  },
+  "/Users/cedriceugeni/dev/perso/portkiller/PortKillerPackage/Sources/PortKillerFeature/Services/ProcessKiller.swift" : {
+    "const-values" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ProcessKiller.swiftconstvalues",
+    "dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ProcessKiller.d",
+    "diagnostics" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ProcessKiller.dia",
+    "index-unit-output-path" : "/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ProcessKiller.o",
+    "llvm-bc" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ProcessKiller.bc",
+    "object" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ProcessKiller.o",
+    "swift-dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ProcessKiller.swiftdeps",
+    "swiftmodule" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/ProcessKiller~partial.swiftmodule"
+  },
+  "/Users/cedriceugeni/dev/perso/portkiller/PortKillerPackage/Sources/PortKillerFeature/Views/PopoverView.swift" : {
+    "const-values" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PopoverView.swiftconstvalues",
+    "dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PopoverView.d",
+    "diagnostics" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PopoverView.dia",
+    "index-unit-output-path" : "/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PopoverView.o",
+    "llvm-bc" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PopoverView.bc",
+    "object" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PopoverView.o",
+    "swift-dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PopoverView.swiftdeps",
+    "swiftmodule" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PopoverView~partial.swiftmodule"
+  },
+  "/Users/cedriceugeni/dev/perso/portkiller/PortKillerPackage/Sources/PortKillerFeature/Views/PortRowView.swift" : {
+    "const-values" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortRowView.swiftconstvalues",
+    "dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortRowView.d",
+    "diagnostics" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortRowView.dia",
+    "index-unit-output-path" : "/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortRowView.o",
+    "llvm-bc" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortRowView.bc",
+    "object" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortRowView.o",
+    "swift-dependencies" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortRowView.swiftdeps",
+    "swiftmodule" : "/Users/cedriceugeni/dev/perso/portkiller/build/Build/Intermediates.noindex/PortKillerFeature.build/Debug/PortKillerFeature.build/Objects-normal/arm64/PortRowView~partial.swiftmodule"
+  }
+}
