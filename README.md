@@ -7,6 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ![PortKiller Screenshot](docs/screenshot.png)
+
 <!-- TODO: Add screenshot -->
 
 ## ✨ Features
@@ -40,6 +41,7 @@ brew install --cask portkiller
 ```
 
 **Update to latest version:**
+
 ```bash
 brew upgrade --cask portkiller
 ```
@@ -77,6 +79,7 @@ open PortKiller.xcworkspace
 ```
 
 **Requirements for building:**
+
 - macOS 14.0 or later
 - Xcode 16.0 or later
 
@@ -87,11 +90,13 @@ open PortKiller.xcworkspace
 **macOS will show a security warning** because the app is not signed or notarized. This is normal and expected for open-source apps distributed outside the Mac App Store.
 
 **To open the app:**
+
 1. Right-click (or Control-click) on `PortKiller.app`
 2. Select **Open** from the menu
 3. Click **Open** in the security dialog
 
 **Or use Terminal:**
+
 ```bash
 xattr -cr /Applications/PortKiller.app
 open /Applications/PortKiller.app
@@ -133,6 +138,7 @@ Built with modern Swift and SwiftUI using a clean workspace + Swift Package arch
 ```
 
 ### Key Technologies
+
 - **SwiftUI** for UI
 - **NSStatusBar** for menu bar integration
 - **Process API** for executing `lsof` and `kill`
@@ -141,6 +147,7 @@ Built with modern Swift and SwiftUI using a clean workspace + Swift Package arch
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
+
 - 🐛 Report bugs
 - 💡 Suggest features
 - 🔧 Submit pull requests
@@ -160,32 +167,3 @@ Built because running `lsof -iTCP -sTCP:LISTEN -n -P` and `kill -9` every time g
 ---
 
 **Made with ❤️ and Swift** | [Report an Issue](https://github.com/cedriceugeni/portkiller/issues)
-        WindowGroup {
-            ContentView()
-        }
-        
-        Settings {
-            SettingsView()
-        }
-    }
-}
-```
-
-### Asset Management
-- **App-Level Assets**: `PortKiller/Assets.xcassets/` (app icon with multiple sizes, accent color)
-- **Feature Assets**: Add `Resources/` folder to SPM package if needed
-
-### SPM Package Resources
-To include assets in your feature package:
-```swift
-.target(
-    name: "PortKillerFeature",
-    dependencies: [],
-    resources: [.process("Resources")]
-)
-```
-
-## Notes
-
-### Generated with XcodeBuildMCP
-This project was scaffolded using [XcodeBuildMCP](https://github.com/cameroncooke/XcodeBuildMCP), which provides tools for AI-assisted macOS development workflows.
