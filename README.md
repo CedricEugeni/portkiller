@@ -13,11 +13,14 @@
 ## ✨ Features
 
 - 🎯 **Simple & Fast** - Lives in your menu bar, one click away
+- ⌨️ **Keyboard Navigation** - Navigate ports with arrow keys (↑/↓) and kill with Enter
+- 🌍 **Multilingual** - Automatic English/French interface based on system language
 - 🔍 **Smart Search** - Filter by port number, process name, or PID
 - 🏷️ **Clear Port Display** - Port numbers styled as easy-to-read tags
-- 🔐 **Safe Kills** - Confirmation for system-critical processes
+- 🔐 **Safe Kills** - Confirmation for system-critical processes with visual feedback (spinner)
 - 📋 **Organized Lists** - Separate system ports (<1024) and user ports (≥1024)
 - 🔄 **Manual Refresh** - Update port list on demand
+- 🚪 **Quick Exit** - Power button to quit instantly
 - 🚫 **No Dock Icon** - Menu bar only, stays out of your way
 
 ## 🎬 Demo
@@ -109,8 +112,17 @@ After the first launch, you can open PortKiller normally from Spotlight or Appli
 1. Click the menu bar icon to open PortKiller
 2. Browse the list of occupied ports
 3. Search for specific ports or processes
-4. Hover over a row and click **Stop** to kill the process
+4. **Kill a process:**
+   - Hover over a row and click **Stop**, or
+   - Use **arrow keys** (↑/↓) to navigate and **Enter** to kill
 5. Click the refresh button to update the list
+6. Click the **power icon** at bottom-right to quit
+
+### Keyboard Shortcuts
+
+- **↑/↓** - Navigate through port list
+- **Enter** - Kill selected process
+- **Type** - Search/filter ports in real-time
 
 ### Permissions
 
