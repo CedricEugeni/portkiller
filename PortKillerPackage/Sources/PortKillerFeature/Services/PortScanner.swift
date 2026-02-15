@@ -43,7 +43,7 @@ public class PortScanner: ObservableObject {
     private func executeLsofDirect() async throws -> String {
         let process = Process()
         process.executableURL = URL(fileURLWithPath: "/usr/sbin/lsof")
-        process.arguments = ["-iTCP", "-sTCP:LISTEN", "-n", "-P"]
+        process.arguments = ["-iTCP", "-sTCP:LISTEN", "-n", "-P", "+c", "0"]
         
         let outputPipe = Pipe()
         let errorPipe = Pipe()
